@@ -56,8 +56,12 @@ class MainFragment : PreferenceFragmentCompat(), OnSharedPreferenceChangeListene
 
     @SuppressLint("UnspecifiedImmutableFlag")
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setHasOptionsMenu(true)
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        setHasOptionsMenu(true);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+
+        val deviceUniqueId: String = sharedPreferences.getString(KEY_DEVICE, "").toString()
+        Log.i("MainFragment", deviceUniqueId)
         setPreferencesFromResource(R.xml.preferences, rootKey)
         initPreferences()
 

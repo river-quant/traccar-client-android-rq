@@ -34,14 +34,21 @@
             android:value="false" />
 
         <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"/>
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"
+            />
 
         <activity-alias
             android:name=".Launcher"
             android:exported="true"
-            android:targetActivity=".MainActivity">
+            android:targetActivity=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -10,6 +10,8 @@
         android:switchTextOn="@string/settings_status_on"
         android:title="@string/settings_status_title" />
 
+
+    <!--
     <EditTextPreference
         android:key="id"
         android:title="@string/settings_id_title" />
@@ -62,5 +64,5 @@
         android:summaryOff="@string/settings_wakelock_off_summary"
         android:summaryOn="@string/settings_wakelock_on_summary"
         android:title="@string/settings_wakelock" />
-
+    -->
 </PreferenceScreen>
