@@ -54,6 +54,9 @@ abstract class PositionProvider(
                     && abs(location.bearing - lastLocation.bearing) >= angle)
         ) {
             Log.i(TAG, "location new")
+            Log.i(TAG, location.hasSpeed().toString())
+            Log.i(TAG, location.speed.toString())
+
             this.lastLocation = location
             listener.onPositionUpdate(Position(deviceId, location, getBatteryStatus(context)))
         } else {

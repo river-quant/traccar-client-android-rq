@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         Log.i("LoginActivity", deviceUniqueId!!)
         if (deviceUniqueId != "") {
             val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent);
+            //startActivity(intent);
         }
         setContentView(R.layout.login)
         userPublicId = findViewById(R.id.userPublicId)
@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showProgressDialog() {
-        progressDialog!!.setMessage("Calling API...")
+        progressDialog!!.setMessage("Logging in...")
         progressDialog!!.setCancelable(false)
         progressDialog!!.show()
     }
