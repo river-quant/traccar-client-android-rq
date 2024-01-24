@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showProgressDialog() {
-        progressDialog!!.setMessage("Calling API...")
+        progressDialog!!.setMessage("Logging in...")
         progressDialog!!.setCancelable(false)
         progressDialog!!.show()
     }
