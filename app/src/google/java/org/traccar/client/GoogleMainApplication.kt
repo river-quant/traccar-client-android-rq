@@ -21,13 +21,15 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
+/*
 import com.google.android.play.core.review.ReviewInfo
 import com.google.android.play.core.review.ReviewManagerFactory
 import com.google.android.play.core.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
+*/
 
 class GoogleMainApplication : MainApplication() {
-
+    /*
     private var firebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate() {
@@ -59,4 +61,5 @@ class GoogleMainApplication : MainApplication() {
         private const val KEY_RATING_SHOWN = "ratingShown"
         private const val RATING_THRESHOLD = -24 * 60 * 60 * 1000L
     }
+     */
 }

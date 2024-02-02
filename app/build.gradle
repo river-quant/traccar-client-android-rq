@@ -1,15 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    /*
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
+     */
 }
 
 android {
     compileSdk 34
     defaultConfig {
         applicationId 'org.traccar.client'
-        minSdkVersion 16
+        minSdkVersion 19 // 16
         targetSdkVersion 34
         versionCode 83
         versionName '7.2'
@@ -54,7 +56,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'androidx.core:core-ktx:1.12.0'
@@ -68,26 +70,31 @@ dependencies {
     testImplementation 'androidx.test:core:1.5.0'
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.robolectric:robolectric:4.7.3'
+    /*
     googleImplementation platform('com.google.firebase:firebase-bom:28.2.1')
     googleImplementation 'com.google.firebase:firebase-core'
     googleImplementation 'com.google.firebase:firebase-analytics'
     googleImplementation 'com.google.firebase:firebase-crashlytics'
+     */
     googleImplementation 'com.google.android.gms:play-services-location:21.0.1'
-    googleImplementation 'com.google.android.play:core:1.10.3'
+    //googleImplementation 'com.google.android.play:core:1.10.3'
 }
 
+/*
 tasks.register('copyFirebaseConfig', Copy) {
     from '../../environment/google-services'
     into '.'
     include 'traccar-client-android.json'
     rename('traccar-client-android.json', 'google-services.json')
 }
+*/
+
 afterEvaluate {
     tasks.matching { it.name.contains('Google') }.configureEach { task ->
         if (task.name.contains('Regular')) {
             task.enabled false
         } else {
-            task.dependsOn copyFirebaseConfig
+            //task.dependsOn copyFirebaseConfig
         }
     }
 }
